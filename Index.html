@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Speed Test Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Typing Speed Test Pro ⌨️</h1>
+      <button id="themeToggle">🌙</button>
+    </div>
+
+    <div class="settings">
+      <div class="setting-group">
+        <label>Time:</label>
+        <select id="timeSelect">
+          <option value="15">15s</option>
+          <option value="30">30s</option>
+          <option value="60" selected>60s</option>
+          <option value="120">120s</option>
+        </select>
+      </div>
+      <div class="setting-group">
+        <label>Difficulty:</label>
+        <select id="difficultySelect">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="setting-group">
+        <label><input type="checkbox" id="soundToggle" checked> Sound</label>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h3 id="time">60</h3>
+        <p>Seconds</p>
+      </div>
+      <div class="stat-box">
+        <h3 id="wpm">0</h3>
+        <p>WPM</p>
+      </div>
+      <div class="stat-box">
+        <h3 id="accuracy">100</h3>
+        <p>Accuracy %</p>
+      </div>
+      <div class="stat-box">
+        <h3 id="errors">0</h3>
+        <p>Errors</p>
+      </div>
+      <div class="stat-box">
+        <h3 id="words">0</h3>
+        <p>Words</p>
+      </div>
+    </div>
+
+    <div class="quote-display" id="quoteDisplay">Select settings and click Start...</div>
+    <textarea id="quoteInput" placeholder="Click Start and begin typing here..." disabled></textarea>
+
+    <div class="btn-group">
+      <button id="startBtn">Start Test</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <div class="results" id="results">
+      <h2>Test Complete! 🎉</h2>
+      <div class="result-grid">
+        <div class="result-item">
+          <p>Your WPM</p>
+          <h3 id="finalWpm">0</h3>
+        </div>
+        <div class="result-item">
+          <p>Accuracy</p>
+          <h3 id="finalAccuracy">0%</h3>
+        </div>
+        <div class="result-item">
+          <p>Correct Chars</p>
+          <h3 id="correctChars">0</h3>
+        </div>
+        <div class="result-item">
+          <p>Wrong Chars</p>
+          <h3 id="wrongChars">0</h3>
+        </div>
+        <div class="result-item">
+          <p>Time Mode</p>
+          <h3 id="finalTime">60s</h3>
+        </div>
+        <div class="result-item">
+          <p>Difficulty</p>
+          <h3 id="finalDifficulty">Medium</h3>
+        </div>
+      </div>
+      <p class="high-score" id="highScore"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
